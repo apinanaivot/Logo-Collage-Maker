@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 
-logos_path = 'path/to/images'
+logos_path = 'path/to/images' # File path to where your .png, .jpg and .jpeg images are stored
 logos = sorted(os.listdir(logos_path), key=lambda s: s.lower())
 num_columns = 12 # number of columns (vertical rows)
 margin = 50 # Margin between images

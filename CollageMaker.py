@@ -44,7 +44,7 @@ canvas = Image.new('RGBA', (canvas_width, canvas_height), 'white')
 available_space = [canvas_height - sum(im.height for im in col) for col in columns]
 
 # Divide the available space by the number of gaps between images in the column
-spacing = [space / (len(col) - 1) - 3 if len(col) > 1 else 0 for col, space in zip(columns, available_space)]  # Subtracting 1 pixel from the spacing
+spacing = [space / (len(col) - 1) - 3 if len(col) > 1 else 0 for col, space in zip(columns, available_space)]  # Subtracting 3 pixel from the spacing (set higher if images get cut at the bottom)
 
 # Place images on the canvas
 x_offset = margin
